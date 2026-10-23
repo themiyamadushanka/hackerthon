@@ -19,16 +19,24 @@ export default function Navbar({ backendStatus }) {
           </div>
         </div>
 
-        {/* Backend Connectivity Status */}
-        <div id="backend-status-indicator" className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs">
-          <span
-            className={`w-2 h-2 rounded-full ${
-              isOnline ? "bg-emerald-400 shadow-sm shadow-emerald-400 animate-pulse" : "bg-rose-500 shadow-sm shadow-rose-500"
-            }`}
-          />
-          <span className="text-slate-300 font-medium">
-            Backend: {isOnline ? "Flask Online (5000)" : "Disconnected"}
+        {/* Status Indicators */}
+        <div className="flex items-center gap-2.5">
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-400 text-xs font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            Dispatch Ready
           </span>
+
+          {/* Backend Connectivity Status */}
+          <div id="backend-status-indicator" className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs">
+            <span
+              className={`w-2 h-2 rounded-full ${
+                isOnline ? "bg-emerald-400 shadow-sm shadow-emerald-400 animate-pulse" : "bg-rose-500 shadow-sm shadow-rose-500"
+              }`}
+            />
+            <span className="text-slate-300 font-medium">
+              Backend: {isOnline ? "Flask Online (5000)" : "Disconnected"}
+            </span>
+          </div>
         </div>
       </div>
     </header>
