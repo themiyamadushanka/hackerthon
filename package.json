@@ -1,0 +1,14 @@
+{
+  "name": "aidlink-hackathon",
+  "version": "1.0.0",
+  "description": "AidLink AI for Humanity - Next.js + Flask Duo",
+  "scripts": {
+    "dev": "concurrently -n \"FLASK,NEXTJS\" -c \"yellow.bold,cyan.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "python backend/app.py",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && python -m pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
