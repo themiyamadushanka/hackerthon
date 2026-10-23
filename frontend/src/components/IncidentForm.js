@@ -53,7 +53,18 @@ export default function IncidentForm({
         />
         <div className="flex justify-between items-center mt-1 text-xs text-slate-500">
           <span>Plain text or distress radio transcripts</span>
-          <span>{text.length} chars</span>
+          <div className="flex items-center gap-3">
+            {text && (
+              <button
+                type="button"
+                onClick={() => setText("")}
+                className="text-xs text-slate-400 hover:text-rose-400 transition-colors font-medium underline-offset-2 hover:underline"
+              >
+                Clear
+              </button>
+            )}
+            <span>{text.length} chars</span>
+          </div>
         </div>
       </div>
 
