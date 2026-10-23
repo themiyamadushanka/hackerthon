@@ -1,4 +1,4 @@
-# AidLink AI - Hackathon Project
+# Hackathon Project
 
 AidLink is an AI-powered humanitarian response coordination platform featuring a **Next.js** frontend and a **Python Flask** backend.
 
